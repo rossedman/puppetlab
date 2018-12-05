@@ -1,0 +1,18 @@
+version: '2'
+services:
+  puppet:
+    container_name: puppet
+    hostname: puppet
+    image: puppet/puppetserver-standalone
+    ports:
+      - 8140
+    volumes:
+      - ./code:/etc/puppetlabs/code/
+      - ./puppet/ssl:/etc/puppetlabs/puppet/ssl/
+      - ./puppet/serverdata:/opt/puppetlabs/server/data/puppetserver/
+  agent:
+    container_name: agent
+    hostname: agent1
+    image: puppet/puppet-agent
+    links:
+      - puppet:puppet.local
