@@ -1,3 +1,5 @@
-class core {
-  notify { "installing core module": }
+class core (
+  String $message = hiera('core::message', "installing core module!")
+) {
+  notify { $message: }
 }
