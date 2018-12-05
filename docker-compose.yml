@@ -49,6 +49,8 @@ services:
   # agent will exit 0 after run
   agent:
     container_name: agent
+    # change the hostname to get different 
+    # puppet roles assigned
     hostname: agent
     image: puppet/puppet-agent
     networks:

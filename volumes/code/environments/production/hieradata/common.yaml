@@ -1,1 +1,1 @@
-core::message: "message overridden by hiera data"
+core::message: "overridden by common hiera data"
