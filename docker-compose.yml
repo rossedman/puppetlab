@@ -45,10 +45,11 @@ services:
       - ./volumes/puppetdb/ssl:/etc/puppetlabs/puppet/ssl/
     networks:
       default:
-
-  agent2:
-    container_name: agent2
-    hostname: agent2
+  
+  # agent will exit 0 after run
+  agent:
+    container_name: agent
+    hostname: agent
     image: puppet/puppet-agent
     networks:
       default:

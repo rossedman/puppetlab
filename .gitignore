@@ -3,3 +3,6 @@ volumes/puppet
 volumes/puppetdb
 volumes/puppetdb-postgres
 volumes/serverdata
+
+# vagrant
+.vagrant
